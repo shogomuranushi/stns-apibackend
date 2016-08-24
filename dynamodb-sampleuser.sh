@@ -4,7 +4,7 @@ export AWS_DEFAULT_OUTPUT=json
 
 aws dynamodb put-item \
     --table-name user-stns-osuser \
-    --item '{ "name": {"S": "orenouser"},"directory": {"S": "/home/oreuser"},"gecos":  {"S": "null"},"group_id":  {"S": "1002"},"id":  {"S": "1002"},"keys":  {"S": "\"ssh-rsa\""},"link_users":  {"S": "null"},"link_users":  {"S": "null"},"password":  {"S": "null"},"shell":  {"S": "/bin/bash"} }'
+    --item '{ "name": {"S": "orenouser"},"directory": {"S": "/home/orenouser"},"gecos":  {"S": "null"},"group_id":  {"S": "1002"},"id":  {"S": "1002"},"keys":  {"S": "\"ssh-rsa\""},"link_users":  {"S": "null"},"link_users":  {"S": "null"},"password":  {"S": "null"},"shell":  {"S": "/bin/bash"} }'
 
 aws dynamodb put-item \
     --table-name user-stns-osgroup \
