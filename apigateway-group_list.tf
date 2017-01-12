@@ -50,15 +50,15 @@ resource "aws_api_gateway_integration_response" "group_list" {
   status_code = "${aws_api_gateway_method_response.group_list_200.status_code}"
   response_templates = {
   "application/json" = "#set($inputRoot = $input.path('$'))
-#foreach($Item in $inputRoot.Items) 
 {
+#foreach($Item in $inputRoot.Items) 
   \"$Item.name.S\": {
     \"id\": $Item.id.S,
     \"users\": [ $Item.users.S ],
     \"link_groups\": $Item.link_groups.S
   }
-}
 #if($foreach.hasNext),#end
 #end"
+}
   }
 }
